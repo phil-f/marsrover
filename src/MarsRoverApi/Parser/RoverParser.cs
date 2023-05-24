@@ -46,8 +46,8 @@ public class RoverParser
     private static string[] GetTokens(string str)
     {
         const string delimiter = "|";
-
         var tokens = str.Split(new[] { delimiter }, StringSplitOptions.RemoveEmptyEntries);
+
         if (tokens.Length != 2)
         {
             throw new Exception(
@@ -60,7 +60,6 @@ public class RoverParser
     private static Position ParsePosition(string str)
     {
         const string delimiter = " ";
-
         var tokens = str.Split(new[] { delimiter }, StringSplitOptions.RemoveEmptyEntries);
 
         if (tokens.Length != 3)
